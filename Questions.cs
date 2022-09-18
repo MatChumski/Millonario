@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Millonario
 {
@@ -36,6 +37,15 @@ namespace Millonario
             "A",
             "C",
             "D"
+        };
+        public List<string> clues = new List<string>()
+        {
+            "El presidente era popular por su barba peculiar",
+            "También fue causante de la primera",
+            "Su mascota es un payaso",
+            "Fue escrita por Albert Einstein, involucra la velocidad de la luz",
+            "Es un agente secreto en una caricatura",
+            "Conocido como Heisenberg, su apellido incluye un color"
         };
 
         public TabPage nextQuestion;
@@ -280,6 +290,85 @@ namespace Millonario
             currentQuestion = tabQ6;
             tabQuestions.SelectedTab = currentQuestion;
             bonus = true;
+            lblCambio.Enabled = false;
+        }
+
+        private void ShowClue(string message)
+        {
+            string caption = "Pista";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            // Displays the MessageBox.
+            result = MessageBox.Show(message, caption, buttons);
+        }
+
+        private void lblPista_Click(object sender, EventArgs e)
+        {
+            string message = "";
+            if (currentQuestion == tabQ1)
+            {
+                message = clues[0];
+            }
+            else if (currentQuestion == tabQ2)
+            {
+                message = clues[1];
+            }
+            else if (currentQuestion == tabQ3)
+            {
+                message = clues[2];
+            }
+            else if (currentQuestion == tabQ4)
+            {
+                message = clues[3];
+            }
+            else if (currentQuestion == tabQ5)
+            {
+                message = clues[4];
+            } 
+            else if (currentQuestion == tabQ6)
+            {
+                message = clues[5];
+            }
+
+            ShowClue(message);
+            lblPista.Enabled = false;
+                
+        }
+
+        private void HideOptions(RadioButton option1, RadioButton option2)
+        {
+            option1.Enabled = false;
+            option2.Enabled = false;
+        }
+        private void lbl50_Click(object sender, EventArgs e)
+        {
+            if (currentQuestion == tabQ1)
+            {
+                HideOptions(rbQ1C, rbQ1D);
+            }
+            else if (currentQuestion == tabQ2)
+            {
+                HideOptions(rbQ2B, rbQ2D);
+            }
+            else if (currentQuestion == tabQ3)
+            {
+                HideOptions(rbQ3A, rbQ3C);
+            }
+            else if (currentQuestion == tabQ4)
+            {
+                HideOptions(rbQ4B, rbQ4C);
+            }
+            else if (currentQuestion == tabQ5)
+            {
+                HideOptions(rbQ5B, rbQ5D);
+            }
+            else if (currentQuestion == tabQ6)
+            {
+                HideOptions(rbQ6B, rbQ6C);
+            }
+
+            lbl50.Enabled = false;
         }
     }
 }

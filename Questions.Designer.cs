@@ -98,12 +98,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblRespuestasCorrectas = new System.Windows.Forms.Label();
             this.lblRespuestasJugador = new System.Windows.Forms.Label();
-            this.lblRespuestas = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.pnlQAyudas = new System.Windows.Forms.Panel();
             this.lblCambio = new System.Windows.Forms.Label();
             this.lbl50 = new System.Windows.Forms.Label();
             this.lblPista = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tabQuestions.SuspendLayout();
             this.tabQInicio.SuspendLayout();
             this.tabQ1.SuspendLayout();
@@ -905,10 +905,10 @@
             this.rbQ6A.ForeColor = System.Drawing.Color.Black;
             this.rbQ6A.Location = new System.Drawing.Point(3, 8);
             this.rbQ6A.Name = "rbQ6A";
-            this.rbQ6A.Size = new System.Drawing.Size(140, 34);
+            this.rbQ6A.Size = new System.Drawing.Size(173, 34);
             this.rbQ6A.TabIndex = 5;
             this.rbQ6A.TabStop = true;
-            this.rbQ6A.Text = "John Snow";
+            this.rbQ6A.Text = "Jesse Pinkman";
             this.rbQ6A.UseVisualStyleBackColor = false;
             this.rbQ6A.CheckedChanged += new System.EventHandler(this.rbQ6_CheckedChanged);
             // 
@@ -986,7 +986,6 @@
             this.tabResults.Controls.Add(this.label1);
             this.tabResults.Controls.Add(this.lblRespuestasCorrectas);
             this.tabResults.Controls.Add(this.lblRespuestasJugador);
-            this.tabResults.Controls.Add(this.lblRespuestas);
             this.tabResults.Controls.Add(this.label20);
             this.tabResults.Location = new System.Drawing.Point(4, 24);
             this.tabResults.Name = "tabResults";
@@ -1000,21 +999,21 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTotal.Location = new System.Drawing.Point(8, 174);
+            this.lblTotal.Location = new System.Drawing.Point(343, 140);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(47, 30);
+            this.lblTotal.Size = new System.Drawing.Size(88, 50);
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "A/B";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BackColor = System.Drawing.Color.Yellow;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(8, 123);
+            this.label2.Location = new System.Drawing.Point(271, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 30);
             this.label2.TabIndex = 10;
@@ -1023,10 +1022,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.Lime;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(8, 93);
+            this.label1.Location = new System.Drawing.Point(284, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 30);
             this.label1.TabIndex = 9;
@@ -1038,7 +1037,7 @@
             this.lblRespuestasCorrectas.BackColor = System.Drawing.Color.Transparent;
             this.lblRespuestasCorrectas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRespuestasCorrectas.ForeColor = System.Drawing.Color.Black;
-            this.lblRespuestasCorrectas.Location = new System.Drawing.Point(119, 122);
+            this.lblRespuestasCorrectas.Location = new System.Drawing.Point(390, 91);
             this.lblRespuestasCorrectas.Name = "lblRespuestasCorrectas";
             this.lblRespuestasCorrectas.Size = new System.Drawing.Size(25, 30);
             this.lblRespuestasCorrectas.TabIndex = 8;
@@ -1050,31 +1049,19 @@
             this.lblRespuestasJugador.BackColor = System.Drawing.Color.Transparent;
             this.lblRespuestasJugador.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRespuestasJugador.ForeColor = System.Drawing.Color.Black;
-            this.lblRespuestasJugador.Location = new System.Drawing.Point(119, 92);
+            this.lblRespuestasJugador.Location = new System.Drawing.Point(390, 50);
             this.lblRespuestasJugador.Name = "lblRespuestasJugador";
             this.lblRespuestasJugador.Size = new System.Drawing.Size(25, 30);
             this.lblRespuestasJugador.TabIndex = 7;
             this.lblRespuestasJugador.Text = "X";
             // 
-            // lblRespuestas
-            // 
-            this.lblRespuestas.AutoSize = true;
-            this.lblRespuestas.BackColor = System.Drawing.Color.Transparent;
-            this.lblRespuestas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRespuestas.ForeColor = System.Drawing.Color.Black;
-            this.lblRespuestas.Location = new System.Drawing.Point(8, 50);
-            this.lblRespuestas.Name = "lblRespuestas";
-            this.lblRespuestas.Size = new System.Drawing.Size(121, 30);
-            this.lblRespuestas.TabIndex = 6;
-            this.lblRespuestas.Text = "Respuestas:";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label20.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(8, 3);
+            this.label20.Location = new System.Drawing.Point(314, 8);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(138, 32);
             this.label20.TabIndex = 5;
@@ -1113,6 +1100,7 @@
             this.lbl50.Size = new System.Drawing.Size(87, 31);
             this.lbl50.TabIndex = 9;
             this.lbl50.Text = "50/50";
+            this.lbl50.Click += new System.EventHandler(this.lbl50_Click);
             // 
             // lblPista
             // 
@@ -1124,6 +1112,14 @@
             this.lblPista.Size = new System.Drawing.Size(98, 31);
             this.lblPista.TabIndex = 9;
             this.lblPista.Text = "PISTA";
+            this.lblPista.Click += new System.EventHandler(this.lblPista_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(4, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(784, 29);
+            this.panel6.TabIndex = 2;
             // 
             // Questions
             // 
@@ -1131,6 +1127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnlQAyudas);
             this.Controls.Add(this.tabQuestions);
             this.ForeColor = System.Drawing.Color.Transparent;
@@ -1246,9 +1243,9 @@
         private RadioButton rbQ6B;
         private Label lblRespuestasCorrectas;
         private Label lblRespuestasJugador;
-        private Label lblRespuestas;
         private Label label2;
         private Label label1;
         private Label lblTotal;
+        private Panel panel6;
     }
 }

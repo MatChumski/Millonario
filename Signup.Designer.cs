@@ -33,7 +33,7 @@
             this.lblSignupWrongPwd = new System.Windows.Forms.Label();
             this.txtSignupPwd2 = new System.Windows.Forms.TextBox();
             this.txtSignupEmail = new System.Windows.Forms.TextBox();
-            this.txtSignupCancel = new System.Windows.Forms.Button();
+            this.btnSignupCancel = new System.Windows.Forms.Button();
             this.lblSignupWrongEmail = new System.Windows.Forms.Label();
             this.txtSignupPwd = new System.Windows.Forms.TextBox();
             this.pnlSignupTitle = new System.Windows.Forms.Panel();
@@ -50,7 +50,7 @@
             this.pnlSignup.Controls.Add(this.lblSignupWrongPwd);
             this.pnlSignup.Controls.Add(this.txtSignupPwd2);
             this.pnlSignup.Controls.Add(this.txtSignupEmail);
-            this.pnlSignup.Controls.Add(this.txtSignupCancel);
+            this.pnlSignup.Controls.Add(this.btnSignupCancel);
             this.pnlSignup.Controls.Add(this.lblSignupWrongEmail);
             this.pnlSignup.Controls.Add(this.txtSignupPwd);
             this.pnlSignup.Controls.Add(this.pnlSignupTitle);
@@ -124,19 +124,19 @@
             this.txtSignupEmail.Enter += new System.EventHandler(this.txtSignupEmail_Enter);
             this.txtSignupEmail.Leave += new System.EventHandler(this.txtSignupEmail_Leave);
             // 
-            // txtSignupCancel
+            // btnSignupCancel
             // 
-            this.txtSignupCancel.BackColor = System.Drawing.Color.DarkGray;
-            this.txtSignupCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtSignupCancel.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSignupCancel.Location = new System.Drawing.Point(475, 379);
-            this.txtSignupCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSignupCancel.Name = "txtSignupCancel";
-            this.txtSignupCancel.Size = new System.Drawing.Size(183, 38);
-            this.txtSignupCancel.TabIndex = 5;
-            this.txtSignupCancel.Text = "Regresar";
-            this.txtSignupCancel.UseVisualStyleBackColor = false;
-            this.txtSignupCancel.Click += new System.EventHandler(this.txtSignupCancel_Click);
+            this.btnSignupCancel.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSignupCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignupCancel.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSignupCancel.Location = new System.Drawing.Point(475, 379);
+            this.btnSignupCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSignupCancel.Name = "btnSignupCancel";
+            this.btnSignupCancel.Size = new System.Drawing.Size(183, 38);
+            this.btnSignupCancel.TabIndex = 5;
+            this.btnSignupCancel.Text = "Regresar";
+            this.btnSignupCancel.UseVisualStyleBackColor = false;
+            this.btnSignupCancel.Click += new System.EventHandler(this.txtSignupCancel_Click);
             // 
             // lblSignupWrongEmail
             // 
@@ -246,7 +246,7 @@
         #endregion
 
         private Panel pnlSignup;
-        private Button txtSignupCancel;
+        private Button btnSignupCancel;
         private Label lblSignupWrongEmail;
         private TextBox txtSignupPwd;
         private Panel pnlSignupTitle;

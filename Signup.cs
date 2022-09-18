@@ -1,4 +1,5 @@
 ﻿using System.Net.Mail;
+using System.Windows.Forms;
 
 namespace Millonario
 {
@@ -56,6 +57,9 @@ namespace Millonario
             if (!validEmail)
             {
                 lblSignupWrongEmail.ForeColor = Color.Red;
+            } else
+            {
+                lblSignupWrongEmail.ForeColor = Color.Transparent;
             }
 
             bool validPwd = true;
@@ -64,17 +68,33 @@ namespace Millonario
             {
                 validPwd = false;
                 lblSignupWrongPwd.ForeColor = Color.Red;
+            } else
+            {
+                lblSignupWrongPwd.ForeColor = Color.Transparent;
             }
 
             if (allInfo && validEmail && validPwd)
             {
                 System.Diagnostics.Debug.WriteLine("XD");
 
-                lblMissingInfo.Text = "¡Cuenta Creada! Presione Regresar para iniciar sesión";
-                lblMissingInfo.ForeColor = Color.Lime;
-
                 User newUser = new (username, pwd, email);
                 Program.userList.Add(newUser);
+
+                string message = "¡Cuenta Creada! Ahora puede iniciar sesión";
+                string caption = "Registro";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    Login login = new Login();
+
+                    this.Hide();
+                    login.Show();
+                }
+
             }
             else
             {
