@@ -29,7 +29,11 @@ namespace Millonario
             if (valid)
             {
                 System.Diagnostics.Debug.WriteLine("bruh");
-                lblIncorrecto.ForeColor = Color.Transparent;
+
+                Questions questions = new Questions();
+
+                this.Hide();
+                questions.Show();
             }
             else
             {
