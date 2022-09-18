@@ -1,14 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
-
 namespace Millonario
 {
     public partial class Login : Form
@@ -18,19 +7,8 @@ namespace Millonario
             InitializeComponent();
         }
 
-        public List<string> userList = new List<string>();
-        public List<string> passwordList = new List<string>();
-
         private void btnLogin_click(object sender, EventArgs e)
         {
-
-            userList.Add("admin");
-            passwordList.Add("admin123");
-            userList.Add("mateo");
-            passwordList.Add("mateo123");
-            userList.Add("MatChumski");
-            passwordList.Add("02040521lol");
-
             string username = txtUser.Text;
             string password = txtPassword.Text;
 
@@ -39,9 +17,10 @@ namespace Millonario
 
             bool valid = false;
 
-            for (int i = 0; i < userList.Count; i++)
+            for (int i = 0; i < Program.userList.Count; i++)
             {
-                if (username == userList[i] && password == passwordList[i])
+                User user = Program.userList[i];
+                if ((username == user.Username || username == user.Email) && password == user.Password)
                 {
                     valid = true;
                     break;
@@ -110,6 +89,14 @@ namespace Millonario
                 txtPassword.Text = "Contraseña";
                 txtPassword.ForeColor = Color.LightGray;
             }
+        }
+
+        private void btnLoginSignup_Click(object sender, EventArgs e)
+        {
+            Signup signup = new Signup();
+
+            this.Hide();
+            signup.Show();
         }
     }
 }

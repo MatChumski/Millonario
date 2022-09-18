@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlMain1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLoginSignup = new System.Windows.Forms.Button();
             this.lblIncorrecto = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pnl_title = new System.Windows.Forms.Panel();
@@ -42,7 +42,7 @@
             // 
             // pnlMain1
             // 
-            this.pnlMain1.Controls.Add(this.button1);
+            this.pnlMain1.Controls.Add(this.btnLoginSignup);
             this.pnlMain1.Controls.Add(this.lblIncorrecto);
             this.pnlMain1.Controls.Add(this.txtPassword);
             this.pnlMain1.Controls.Add(this.pnl_title);
@@ -54,18 +54,19 @@
             this.pnlMain1.Size = new System.Drawing.Size(905, 490);
             this.pnlMain1.TabIndex = 0;
             // 
-            // button1
+            // btnLoginSignup
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(475, 293);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Registrarse";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLoginSignup.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLoginSignup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoginSignup.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLoginSignup.Location = new System.Drawing.Point(475, 293);
+            this.btnLoginSignup.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLoginSignup.Name = "btnLoginSignup";
+            this.btnLoginSignup.Size = new System.Drawing.Size(183, 38);
+            this.btnLoginSignup.TabIndex = 5;
+            this.btnLoginSignup.Text = "Registrarse";
+            this.btnLoginSignup.UseVisualStyleBackColor = false;
+            this.btnLoginSignup.Click += new System.EventHandler(this.btnLoginSignup_Click);
             // 
             // lblIncorrecto
             // 
@@ -156,7 +157,7 @@
             this.btnLogin.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,7 +166,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximumSize = new System.Drawing.Size(949, 558);
             this.MinimumSize = new System.Drawing.Size(949, 558);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Form1";
             this.pnlMain1.ResumeLayout(false);
             this.pnlMain1.PerformLayout();
@@ -184,6 +185,6 @@
         private System.Windows.Forms.Panel pnl_title;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblIncorrecto;
-        private Button button1;
+        private Button btnLoginSignup;
     }
 }

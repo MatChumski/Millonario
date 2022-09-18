@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Millonario
 {
-    public partial class Form2 : Form
+    public partial class Questions : Form
     {
-        public Form2()
+        public Questions()
         {
             InitializeComponent();
         }
